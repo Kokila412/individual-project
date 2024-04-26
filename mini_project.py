@@ -9,7 +9,7 @@ guessed=""
 while total_chance>0:
     fail=0
     for char in selected_word:
-          a=print(input("enter a char:"))
+          a=input("enter a char:")
           if a==char:
             guessed=guessed+a
             print(guessed)
