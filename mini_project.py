@@ -1,12 +1,12 @@
 import random
 
-list_of_words=["banana","apple","condition","chopper","luffy","durian"
+list_of_words=["banana","pen","condition","chopper","luffy","durian"
                ,"tofu","kokila","nail","phone"]
 
 selected_word = random.choice(list_of_words)
 total_chance = len(list_of_words)
 guessed=""
-print(len(selected_word),"lettered word",selected_word)
+print("make your guess")
 count=0
 while total_chance>0:
     a=input("enter a char:")
@@ -23,18 +23,17 @@ while total_chance>0:
                 fail=fail+1
     count=count+1
     if fail==len(selected_word):
-         print(total_chance,"chances left")
+         total_chance=total_chance-1
+         print("entered letter is not in the word,try again",total_chance,"chances left")
          print()
          count=count-1
-         temp=total_chance
-         total_chance=total_chance-1
     else:
         print(guessed, end=" ")
         print()
     if guessed==selected_word:
-       print(guessed)
+       print("congrats!you have a strong intuition",guessed, "you win!")
        break
         
 if total_chance==0:
-    print("failed")
+    print("failed, the answer is",selected_word)
 
