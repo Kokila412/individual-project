@@ -24,7 +24,7 @@ try:
 			print("enter only a single character")
 		for i in range(len(flower)):
 				if flower[i]==ans:
-						guess[i]= flower[i]
+					guess[i]= flower[i]
 				else:
 					fail=fail+1
 		for i in guess:
