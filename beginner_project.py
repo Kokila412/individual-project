@@ -8,33 +8,32 @@ flower=random.choice(list)
 guess=[]
 
 chances=len(list)
-if __name__=='__main__'
+if __name__=='__main__':
 	for i in flower:
-	guess.append("-")
+		guess.append("-")
 	for i in guess:
-	print(i, end=" ")
+		print(i, end=" ")
 	try:
-	while chances>0:
-		print()
-		ans=input("enter your input:")
-		fail=0
-		if not ans.isalpha():
-			print("please, enter an alphabet")
-		if len(ans)>1:
-			print("enter only a single character")
-		for i in range(len(flower)):
-				if flower[i]==ans:
-					guess[i]= flower[i]
-				else:
-					fail=fail+1
-		for i in guess:
-			print(i, end=" ")
-		if "-" not in guess:
-				print()
-				print("congrats")
-				break
-		if fail==len(flower):
+		while chances!=0:
+			print()
+			ans=input("enter your input:")
+			fail=0
+			if not ans.isalpha():
+				print("please, enter an alphabet")
+			if len(ans)>1:
+				print("enter only a single character")
+			for i in range(len(flower)):
+					if flower[i]==ans:
+						guess[i]= flower[i]
 			chances=chances-1
+			if ans not in flower:
+				print("try again")
+			for i in guess:
+				print(i, end=" ")
+			if "-" not in guess:
+					print()
+					print("congrats")
+					break
 	except KeyboardInterrupt:
 		print()
 		print("failed")
