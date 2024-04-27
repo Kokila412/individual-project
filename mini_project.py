@@ -32,7 +32,7 @@ while total_chance>0:
         print(guessed, end=" ")
         print()
     if guessed==selected_word:
-       print("congrats!you have a strong intuition",guessed, "you win!")
+       print("congrats!you have a strong intuition. the word is",guessed, "you win!")
        break
         
 if total_chance==0:
