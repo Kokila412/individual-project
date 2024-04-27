@@ -38,3 +38,4 @@ try:
 except KeyboardInterrupt:
 		print()
 		print("failed")
+		exit()
