@@ -13,28 +13,27 @@ if __name__=='__main__':
 		guess.append("-")
 	for i in guess:
 		print(i, end=" ")
-	try:
-		while chances!=0:
-			print()
-			ans=input("enter your input:")
-			fail=0
-			if not ans.isalpha():
-				print("please, enter an alphabet")
-			if len(ans)>1:
-				print("enter only a single character")
-			for i in range(len(flower)):
-					if flower[i]==ans:
-						guess[i]= flower[i]
-			chances=chances-1
-			if ans not in flower:
-				print("try again")
-			for i in guess:
-				print(i, end=" ")
-			if "-" not in guess:
-					print()
-					print("congrats")
-					break
-	except KeyboardInterrupt:
+	while chances!=0:
+		print()
+		ans=input("enter your input:")
+		fail=0
+		if not ans.isalpha():
+			print("please, enter an alphabet")
+		if len(ans)>1:
+			print("enter only a single character")
+		for i in range(len(flower)):
+				if flower[i]==ans:
+					guess[i]= flower[i]
+		chances=chances-1
+		if ans not in flower:
+			print("try again")
+		for i in guess:
+			print(i, end=" ")
+		if "-" not in guess:
+				print()
+				print("congrats")
+				break
+	if chances==0:
 		print()
 		print("failed")
-		exit()
+		
