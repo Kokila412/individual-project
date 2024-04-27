@@ -8,12 +8,12 @@ flower=random.choice(list)
 guess=[]
 
 chances=len(list)
-print(flower)
-for i in flower:
-    guess.append("-")
-for i in guess:
-    print(i, end=" ")
-try:
+if __name__=='__main__'
+	for i in flower:
+	guess.append("-")
+	for i in guess:
+	print(i, end=" ")
+	try:
 	while chances>0:
 		print()
 		ans=input("enter your input:")
@@ -35,7 +35,7 @@ try:
 				break
 		if fail==len(flower):
 			chances=chances-1
-except KeyboardInterrupt:
+	except KeyboardInterrupt:
 		print()
 		print("failed")
 		exit()
