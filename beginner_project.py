@@ -1,3 +1,5 @@
+# a program where the user have to find the word with the hint given.the program will fill the dashes 
+# when the letter us correct either randomly or in a sequential order
 import random 
 list=["rose","jasmine","tulip","dahlia","sunflower","marigold",
       "lily","lotus"]
