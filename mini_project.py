@@ -7,6 +7,7 @@ selected_word = random.choice(list_of_words)
 total_chance = len(list_of_words)
 guessed=""
 print("make your guess")
+print("HINT! after first mistake find the number of "-" to find the number of letters")
 count=0
 while total_chance>0:
     a=input("enter a char:")
