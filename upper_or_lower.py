@@ -3,12 +3,12 @@ from art import logo
 from database import data
 from art import vs
 
-def choice(a):
+def choice():
     a=input("do you wanna play y/n?").lower()
     if a=="y":
-        return True
+        choice()
     elif a=="n":
-        return False
+        print("program ended successfully!")
     else:
         print("enter a valid input")
     
@@ -24,11 +24,8 @@ def display(guess):
         print(f"Name:{person2['name']}, Desc:{person2['description']}")
         guess=input("enter the person who has large number of followers:")
         play_higher_or_lower(person1,person2,guess)
-    else:
-        print("program ended successfully!")
-    choice()
     
-def play_higher_or_lower(p1,p2,maxvalue,guess):
+def play_higher_or_lower(p1,p2,userdata,maxvalue):
     maxvalue=0
     score=0
     p1followers=p1["follower_count"]
@@ -38,8 +35,8 @@ def play_higher_or_lower(p1,p2,maxvalue,guess):
         maxvalue=p1["name"]
     elif p2followers>p1followers:
         maxvalue=p2["name"]
-    if maxvalue==guess:
+    if maxvalue==userdata:
         score+=1
-        choice()
     else:
         choice()
+    print("your score is",score)
