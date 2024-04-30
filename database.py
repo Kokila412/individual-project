@@ -26,13 +26,13 @@ data = [
 	{
 		'name': 'BTS',
 		'follower_count': 10000000,
-		'description': 'Footballer',
-		'country': 'Portugal'
+		'description': 'Singers',
+		'country': 'South Korea'
 	},
 	{
 		'name': 'Ana Huang',
 		'follower_count': 456,
-		'description': 'Musician and actress',
+		'description': 'Novelist',
 		'country': 'United States'
 	}
 ]
