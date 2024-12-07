@@ -7,7 +7,7 @@ print("HINT: it's a flower")
 flower=random.choice(list)
 guess=[]
 
-chances=len(list)
+chances=len(flower)+3
 if __name__=='__main__':
 	for i in flower:
 		guess.append("-")
@@ -24,9 +24,9 @@ if __name__=='__main__':
 		for i in range(len(flower)):
 				if flower[i]==ans:
 					guess[i]= flower[i]
-		chances=chances-1
 		if ans not in flower:
 			print("try again")
+		chances=chances-1
 		for i in guess:
 			print(i, end=" ")
 		if "-" not in guess:
